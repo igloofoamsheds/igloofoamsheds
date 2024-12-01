@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Overlay Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="image-grid">
+        <div class="image" onclick="openOverlay(0)">
+            <img src="https://via.placeholder.com/550" alt="Image 1">
+        </div>
+        <div class="image" onclick="openOverlay(1)">
+            <img src="https://via.placeholder.com/550" alt="Image 2">
+        </div>
+        <div class="image" onclick="openOverlay(2)">
+            <img src="https://via.placeholder.com/550" alt="Image 3">
+        </div>
+        <div class="image" onclick="openOverlay(3)">
+            <img src="https://via.placeholder.com/550" alt="Image 4">
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <span class="close" onclick="closeOverlay()">&times;</span>
+        <div class="overlay-content">
+            <img id="overlay-image" src="" alt="Large Image">
+        </div>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
