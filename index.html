@@ -6,7 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Overlay Carousel</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+</head><style>
+    nav {
+        background-color: #333;
+        padding: 10px;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    nav li {
+        margin-right: 20px;
+        position: relative;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    nav ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #444;
+        padding: 10px;
+        list-style: none;
+    }
+    nav li:hover ul {
+        display: block;
+    }
+</style>
+
 <body><nav>
     <ul>
         <li><a href="/garden-igloo/">Garden Igloo</a>
