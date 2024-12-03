@@ -1,18 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Igloo Foam Sheds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
   <style>
-    /* Reset body margins */
+    /* General Styles */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
     }
 
-    /* Navigation bar styling */
+    /* Navigation Bar */
     nav {
       background-color: black;
       color: white;
@@ -26,7 +27,6 @@
       z-index: 1000;
     }
 
-    /* Navigation links styling */
     nav a {
       color: white;
       text-decoration: none;
@@ -38,9 +38,62 @@
       text-decoration: underline;
     }
 
-    /* Push page content below fixed nav */
+    /* Page Content */
     .content {
-      padding-top: 70px; /* Adjust to nav height */
+      padding-top: 80px;
+      text-align: center;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      margin: 40px auto;
+      width: 90%;
+    }
+
+    .gallery-item img {
+      width: 550px;
+      height: 550px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 2em;
+      color: white;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -54,20 +107,45 @@
 
   <!-- Content Section -->
   <div class="content">
-    <section id="daddy-igloo">
-      <h1>Welcome to Daddy Igloo</h1>
-      <p>Explore the features of our Daddy Igloo model.</p>
-    </section>
+    <h1>Welcome to Igloo Foam Sheds</h1>
+    <p>Explore our range of igloos below.</p>
 
-    <section id="mummy-igloo">
-      <h1>Welcome to Mummy Igloo</h1>
-      <p>Discover the elegance of our Mummy Igloo design.</p>
-    </section>
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+      <div class="gallery-item">
+        <a href="#lightbox1">
+          <img src="https://via.placeholder.com/550" alt="Placeholder Image 1">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="#lightbox2">
+          <img src="https://via.placeholder.com/550" alt="Placeholder Image 2">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="#lightbox3">
+          <img src="https://via.placeholder.com/550" alt="Placeholder Image 3">
+        </a>
+      </div>
+    </div>
+  </div>
 
-    <section id="baby-igloo">
-      <h1>Welcome to Baby Igloo</h1>
-      <p>Perfectly sized for your little ones.</p>
-    </section>
+  <!-- Lightbox 1 -->
+  <div id="lightbox1" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="https://via.placeholder.com/550" alt="Placeholder Image 1">
+  </div>
+
+  <!-- Lightbox 2 -->
+  <div id="lightbox2" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="https://via.placeholder.com/550" alt="Placeholder Image 2">
+  </div>
+
+  <!-- Lightbox 3 -->
+  <div id="lightbox3" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="https://via.placeholder.com/550" alt="Placeholder Image 3">
   </div>
 </body>
 </html>
