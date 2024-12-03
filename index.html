@@ -10,7 +10,6 @@
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
-      line-height: 1.6;
     }
 
     /* Navigation Bar */
@@ -44,13 +43,13 @@
       text-align: center;
     }
 
+    /* Image Grid */
     .image-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+      grid-template-columns: repeat(auto-fill, 550px);
+      justify-content: center;
       gap: 20px;
-      justify-items: center;
       margin: 40px auto;
-      width: 90%;
     }
 
     .gallery-item img {
@@ -110,21 +109,21 @@
     <h1>Welcome to Igloo Foam Sheds</h1>
     <p>Explore our range of igloos below.</p>
 
-    <!-- Image Gallery -->
+    <!-- Image Grid -->
     <div class="image-gallery">
       <div class="gallery-item">
         <a href="#lightbox1">
-          <img src="https://via.placeholder.com/550" alt="Placeholder Image 1">
+          <img src="https://via.placeholder.com/550" alt="Placeholder 1">
         </a>
       </div>
       <div class="gallery-item">
         <a href="#lightbox2">
-          <img src="https://via.placeholder.com/550" alt="Placeholder Image 2">
+          <img src="https://via.placeholder.com/550" alt="Placeholder 2">
         </a>
       </div>
       <div class="gallery-item">
         <a href="#lightbox3">
-          <img src="https://via.placeholder.com/550" alt="Placeholder Image 3">
+          <img src="https://via.placeholder.com/550" alt="Placeholder 3">
         </a>
       </div>
     </div>
@@ -133,20 +132,21 @@
   <!-- Lightbox 1 -->
   <div id="lightbox1" class="lightbox">
     <a href="#" class="lightbox-close">&times;</a>
-    <img src="https://via.placeholder.com/550" alt="Placeholder Image 1">
+    <img src="https://via.placeholder.com/550" alt="Placeholder 1">
   </div>
 
   <!-- Lightbox 2 -->
   <div id="lightbox2" class="lightbox">
     <a href="#" class="lightbox-close">&times;</a>
-    <img src="https://via.placeholder.com/550" alt="Placeholder Image 2">
+    <img src="https://via.placeholder.com/550" alt="Placeholder 2">
   </div>
 
   <!-- Lightbox 3 -->
   <div id="lightbox3" class="lightbox">
     <a href="#" class="lightbox-close">&times;</a>
-    <img src="https://via.placeholder.com/550" alt="Placeholder Image 3">
+    <img src="https://via.placeholder.com/550" alt="Placeholder 3">
   </div>
 </body>
 </html>
+
 
